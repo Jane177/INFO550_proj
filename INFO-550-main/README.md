@@ -3,28 +3,31 @@
 
 For my project, I will analyze  `ProjectA` data. 
 
-This project used linear regression to test the relationship between CPC counts and obsetity. R packages used in this project were 'kableExtra','car','kableExtra' and 'knitr'. which can be installed using R commands.
+This project used linear regression to test the relationship between CPC counts and obsetity. 
 
+## Set up
 
-``` r
-installed_pkgs <- row.names(installed.packages())
+To analyze the data, you will need to have R installed and synchronize your package library.
 
-pkgs <- c("kableExtra","car","kableExtra", "knitr")
+After download the repository, navigate to the project directory on your computer. 
 
-for(p in pkgs){
-	if(!(p %in% installed_pkgs)){
-		install.packages(p)
-	}
-}
+Open an R session in your terminal. Synchronize your package library using the following command:  
+
+```{r}
+
+renv::restore()
+
+```
+Quit R using the command `q()`.
+
+## Run the analysis 
+
+To run the analysis and generate the results report, run the following command in your terminal from the INFO550-project directory: 
+
+```{r}
+
+make report.html
+
 ```
 
-## Execute the analysis
-
-To execute the analysis, from the project folder you can run 
-
-``` bash
-Rscript -e "rmarkdown::render('INFO 555-HW2-YajieLiu.Rmd')"
-```
-
-This will create a file called `INFO 555-HW2-YajieLiu.html` output in your directory that contains the results.
-
+This will create a file called `INFO-555-HW2-YajieLiu.html`. You can open the html file in your browser to view results. 
