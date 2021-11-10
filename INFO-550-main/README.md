@@ -31,3 +31,10 @@ make report.html
 ```
 
 This will create a file called `INFO-555-HW2-YajieLiu.html`. You can open the html file in your browser to view results. 
+
+## Trouble shooting
+If you have problem when synchronize the package library, please try the comman line below to install the gcc:
+
+```{r}
+brew install gcc
+```
